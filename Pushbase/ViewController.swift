@@ -7,49 +7,65 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
+   
+    @IBOutlet var txtUsername: UITextField!
+    @IBOutlet var txtPassword: UITextField!
     
-    @IBOutlet var circleView: UIView!
-    @IBOutlet var circleView1: UIView!
-    @IBOutlet var circleView2: UIView!
-    @IBOutlet var circleView3: UIView!
-    @IBOutlet var circleView4: UIView!
-    @IBOutlet var circleView5: UIView!
-    @IBOutlet var circleView6: UIView!
-    @IBOutlet var circleView7: UIView!
-    @IBOutlet var circleView8: UIView!
-
-    override func viewDidLoad() {
+    @IBAction func btnLogin() {
+        let appDel:AppDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        let context = appDel.persistentContainer.viewContext
+        
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "Users", into: context) as NSManagedObject
+        newUser.setValue(txtUsername.text, forKey: "username")
+        newUser.setValue(txtPassword.text, forKey: "password")
+        
+        do {
+            try context.save()
+        } catch let error {
+            print("Could not cache the response \(error)")
+        }
+        
+        print(newUser)
+        print("Object Saved.")
+        
+    }
+    
+    @IBAction func btnAuth() {
+        let appDel:AppDelegate = (UIApplication.shared.delegate as! AppDelegate)
+        let context = appDel.persistentContainer.viewContext
+        
+        let request:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "Users")
+        request.returnsObjectsAsFaults = false
+        request.predicate = NSPredicate(format: "username = %@", txtUsername.text!)
+        var results:NSArray = []
+        
+        
+        do {
+            results = try context.fetch(request) as NSArray
+        } catch let error {
+            print("Could not cache the response \(error)")
+        }
+        
+        if(results.count > 0) {
+            let res = results[0] as! NSManagedObject
+            if (txtUsername.text == res.value(forKey: "username") as! String? && txtPassword.text == res.value(forKey: "password") as! String?) {
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "newsFeed") as! NewsFeedViewController
+                self.present(nextViewController, animated:true, completion:nil)
+            }
+        } else {
+            print("0 Results Returned... Potential Error.")
+        }
+    }
+    
+   override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        circleView.transform = CGAffineTransform(scaleX: 415, y: 0)
-        circleView1.transform = CGAffineTransform(scaleX: 415, y: 0)
-        circleView2.transform = CGAffineTransform(scaleX: 415, y: 0)
-        circleView3.transform = CGAffineTransform(scaleX: 415, y: 0)
-        circleView4.transform = CGAffineTransform(scaleX: 415, y: 0)
-        circleView5.transform = CGAffineTransform(scaleX: 415, y: 0)
-        circleView6.transform = CGAffineTransform(scaleX: 415, y: 0)
-        circleView7.transform = CGAffineTransform(scaleX: 415, y: 0)
-        circleView8.transform = CGAffineTransform(scaleX: 415, y: 0)
         
-        let timingFunction = CAMediaTimingFunction(controlPoints: 5/6, 0.2, 2/6, 0.9)
-        
-        CATransaction.begin()
-        CATransaction.setAnimationTimingFunction(timingFunction)
-        
-        UIView.animate(withDuration: 1.0) {self.circleView.transform = CGAffineTransform.identity}
-        UIView.animate(withDuration: 1.1) {self.circleView1.transform = CGAffineTransform.identity}
-        UIView.animate(withDuration: 1.2) {self.circleView2.transform = CGAffineTransform.identity}
-        UIView.animate(withDuration: 1.3) {self.circleView3.transform = CGAffineTransform.identity}
-        UIView.animate(withDuration: 1.4) {self.circleView4.transform = CGAffineTransform.identity}
-        UIView.animate(withDuration: 1.5) {self.circleView5.transform = CGAffineTransform.identity}
-        UIView.animate(withDuration: 1.6) {self.circleView6.transform = CGAffineTransform.identity}
-        UIView.animate(withDuration: 1.7) {self.circleView7.transform = CGAffineTransform.identity}
-        UIView.animate(withDuration: 1.8) {self.circleView8.transform = CGAffineTransform.identity}
-        
-        
-        CATransaction.commit()
     }
 
     override func didReceiveMemoryWarning() {

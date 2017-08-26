@@ -12,6 +12,9 @@
 		AA2C700D1F50DA6B00BFEABD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA2C700C1F50DA6B00BFEABD /* Assets.xcassets */; };
 		AA2C70101F50DA6B00BFEABD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2C700E1F50DA6B00BFEABD /* LaunchScreen.storyboard */; };
 		AA2C70191F50DF4F00BFEABD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2C70171F50DE7700BFEABD /* Main.storyboard */; };
+		AA2C701C1F51EB6600BFEABD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2C701B1F51EB5000BFEABD /* CoreData.framework */; };
+		AA2C701F1F51EB9E00BFEABD /* Pushbase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA2C701D1F51EB9E00BFEABD /* Pushbase.xcdatamodeld */; };
+		AA2C70441F520A8F00BFEABD /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C70431F520A8F00BFEABD /* NewsFeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		AA2C700F1F50DA6B00BFEABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA2C70111F50DA6B00BFEABD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA2C70181F50DE7700BFEABD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AA2C701B1F51EB5000BFEABD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AA2C701E1F51EB9E00BFEABD /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		AA2C70431F520A8F00BFEABD /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2C701C1F51EB6600BFEABD /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,7 @@
 			children = (
 				AA2C70041F50DA6B00BFEABD /* Pushbase */,
 				AA2C70031F50DA6B00BFEABD /* Products */,
+				AA2C701A1F51EB5000BFEABD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +62,24 @@
 		AA2C70041F50DA6B00BFEABD /* Pushbase */ = {
 			isa = PBXGroup;
 			children = (
+				AA2C701D1F51EB9E00BFEABD /* Pushbase.xcdatamodeld */,
 				AA2C70051F50DA6B00BFEABD /* AppDelegate.swift */,
 				AA2C70071F50DA6B00BFEABD /* ViewController.swift */,
 				AA2C70171F50DE7700BFEABD /* Main.storyboard */,
+				AA2C70431F520A8F00BFEABD /* NewsFeedViewController.swift */,
 				AA2C700C1F50DA6B00BFEABD /* Assets.xcassets */,
 				AA2C700E1F50DA6B00BFEABD /* LaunchScreen.storyboard */,
 				AA2C70111F50DA6B00BFEABD /* Info.plist */,
 			);
 			path = Pushbase;
+			sourceTree = "<group>";
+		};
+		AA2C701A1F51EB5000BFEABD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA2C701B1F51EB5000BFEABD /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +153,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA2C701F1F51EB9E00BFEABD /* Pushbase.xcdatamodeld in Sources */,
 				AA2C70081F50DA6B00BFEABD /* ViewController.swift in Sources */,
 				AA2C70061F50DA6B00BFEABD /* AppDelegate.swift in Sources */,
+				AA2C70441F520A8F00BFEABD /* NewsFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +338,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AA2C701D1F51EB9E00BFEABD /* Pushbase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AA2C701E1F51EB9E00BFEABD /* DataModel.xcdatamodel */,
+			);
+			currentVersion = AA2C701E1F51EB9E00BFEABD /* DataModel.xcdatamodel */;
+			path = Pushbase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AA2C6FFA1F50DA6B00BFEABD /* Project object */;
 }
