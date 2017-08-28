@@ -65,6 +65,11 @@ class ViewController: UIViewController {
    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    txtUsername.attributedPlaceholder = NSAttributedString(string: "Username",
+                                                           attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+    txtPassword.attributedPlaceholder = NSAttributedString(string: "Password",
+                                                           attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+    
         
     }
 

@@ -15,6 +15,11 @@
 		AA2C701C1F51EB6600BFEABD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2C701B1F51EB5000BFEABD /* CoreData.framework */; };
 		AA2C701F1F51EB9E00BFEABD /* Pushbase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AA2C701D1F51EB9E00BFEABD /* Pushbase.xcdatamodeld */; };
 		AA2C70441F520A8F00BFEABD /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2C70431F520A8F00BFEABD /* NewsFeedViewController.swift */; };
+		AACC79FE1F5382230008078A /* GT-Walsheim-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AACC79FD1F5382230008078A /* GT-Walsheim-Black.ttf */; };
+		AACC7A021F5383DC0008078A /* GT-Walsheim-Bold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AACC7A001F5383600008078A /* GT-Walsheim-Bold.TTF */; };
+		AACC7A031F5383DC0008078A /* GT-Walsheim-Medium-Oblique.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AACC79FF1F5383600008078A /* GT-Walsheim-Medium-Oblique.TTF */; };
+		AACC7A041F5383DC0008078A /* GT-Walsheim-Medium.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AACC7A011F5383600008078A /* GT-Walsheim-Medium.TTF */; };
+		AACC7A071F53857E0008078A /* Quobi_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AACC7A061F53857E0008078A /* Quobi_Logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +33,11 @@
 		AA2C701B1F51EB5000BFEABD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AA2C701E1F51EB9E00BFEABD /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		AA2C70431F520A8F00BFEABD /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
+		AACC79FD1F5382230008078A /* GT-Walsheim-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GT-Walsheim-Black.ttf"; path = "../../../../Downloads/GT-Walsheim-Black.ttf"; sourceTree = "<group>"; };
+		AACC79FF1F5383600008078A /* GT-Walsheim-Medium-Oblique.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GT-Walsheim-Medium-Oblique.TTF"; path = "../../../../Downloads/download-3/GT-Walsheim-Medium-Oblique.TTF"; sourceTree = "<group>"; };
+		AACC7A001F5383600008078A /* GT-Walsheim-Bold.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GT-Walsheim-Bold.TTF"; path = "../../../../Downloads/download-3/GT-Walsheim-Bold.TTF"; sourceTree = "<group>"; };
+		AACC7A011F5383600008078A /* GT-Walsheim-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GT-Walsheim-Medium.TTF"; path = "../../../../Downloads/download-3/GT-Walsheim-Medium.TTF"; sourceTree = "<group>"; };
+		AACC7A061F53857E0008078A /* Quobi_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Quobi_Logo.png; path = ../../../Quobi_Logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +72,8 @@
 		AA2C70041F50DA6B00BFEABD /* Pushbase */ = {
 			isa = PBXGroup;
 			children = (
+				AACC7A051F53856E0008078A /* images */,
+				AACC79FC1F5382010008078A /* fonts */,
 				AA2C701D1F51EB9E00BFEABD /* Pushbase.xcdatamodeld */,
 				AA2C70051F50DA6B00BFEABD /* AppDelegate.swift */,
 				AA2C70071F50DA6B00BFEABD /* ViewController.swift */,
@@ -80,6 +92,25 @@
 				AA2C701B1F51EB5000BFEABD /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AACC79FC1F5382010008078A /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AACC7A001F5383600008078A /* GT-Walsheim-Bold.TTF */,
+				AACC79FF1F5383600008078A /* GT-Walsheim-Medium-Oblique.TTF */,
+				AACC7A011F5383600008078A /* GT-Walsheim-Medium.TTF */,
+				AACC79FD1F5382230008078A /* GT-Walsheim-Black.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		AACC7A051F53856E0008078A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				AACC7A061F53857E0008078A /* Quobi_Logo.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +171,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AACC7A021F5383DC0008078A /* GT-Walsheim-Bold.TTF in Resources */,
+				AACC7A071F53857E0008078A /* Quobi_Logo.png in Resources */,
+				AACC7A031F5383DC0008078A /* GT-Walsheim-Medium-Oblique.TTF in Resources */,
+				AACC7A041F5383DC0008078A /* GT-Walsheim-Medium.TTF in Resources */,
 				AA2C70191F50DF4F00BFEABD /* Main.storyboard in Resources */,
+				AACC79FE1F5382230008078A /* GT-Walsheim-Black.ttf in Resources */,
 				AA2C70101F50DA6B00BFEABD /* LaunchScreen.storyboard in Resources */,
 				AA2C700D1F50DA6B00BFEABD /* Assets.xcassets in Resources */,
 			);
@@ -336,6 +372,7 @@
 				AA2C70161F50DA6B00BFEABD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
