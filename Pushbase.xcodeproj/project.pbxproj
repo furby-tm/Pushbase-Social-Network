@@ -19,7 +19,11 @@
 		AACC7A021F5383DC0008078A /* GT-Walsheim-Bold.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AACC7A001F5383600008078A /* GT-Walsheim-Bold.TTF */; };
 		AACC7A031F5383DC0008078A /* GT-Walsheim-Medium-Oblique.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AACC79FF1F5383600008078A /* GT-Walsheim-Medium-Oblique.TTF */; };
 		AACC7A041F5383DC0008078A /* GT-Walsheim-Medium.TTF in Resources */ = {isa = PBXBuildFile; fileRef = AACC7A011F5383600008078A /* GT-Walsheim-Medium.TTF */; };
-		AACC7A071F53857E0008078A /* Quobi_Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AACC7A061F53857E0008078A /* Quobi_Logo.png */; };
+		AACC7A091F571A3A0008078A /* qobi_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = AACC7A081F571A3A0008078A /* qobi_logo.png */; };
+		AACC7A0E1F57C56A0008078A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AACC7A0C1F57C56A0008078A /* SWRevealViewController.m */; };
+		AACC7A101F57CB3F0008078A /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC7A0F1F57CB3F0008078A /* NewsTableViewController.swift */; };
+		AACC7A121F57CCEC0008078A /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC7A111F57CCEC0008078A /* MenuController.swift */; };
+		AACC7A141F57D3990008078A /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACC7A131F57D3990008078A /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +41,13 @@
 		AACC79FF1F5383600008078A /* GT-Walsheim-Medium-Oblique.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GT-Walsheim-Medium-Oblique.TTF"; path = "../../../../Downloads/download-3/GT-Walsheim-Medium-Oblique.TTF"; sourceTree = "<group>"; };
 		AACC7A001F5383600008078A /* GT-Walsheim-Bold.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GT-Walsheim-Bold.TTF"; path = "../../../../Downloads/download-3/GT-Walsheim-Bold.TTF"; sourceTree = "<group>"; };
 		AACC7A011F5383600008078A /* GT-Walsheim-Medium.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GT-Walsheim-Medium.TTF"; path = "../../../../Downloads/download-3/GT-Walsheim-Medium.TTF"; sourceTree = "<group>"; };
-		AACC7A061F53857E0008078A /* Quobi_Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Quobi_Logo.png; path = ../../../Quobi_Logo.png; sourceTree = "<group>"; };
+		AACC7A081F571A3A0008078A /* qobi_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = qobi_logo.png; path = ../../../qobi_logo.png; sourceTree = "<group>"; };
+		AACC7A0B1F57C5690008078A /* Pushbase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Pushbase-Bridging-Header.h"; sourceTree = "<group>"; };
+		AACC7A0C1F57C56A0008078A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		AACC7A0D1F57C56A0008078A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		AACC7A0F1F57CB3F0008078A /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		AACC7A111F57CCEC0008078A /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ../../../Downloads/SidebarMenu/SidebarMenu/MenuController.swift; sourceTree = "<group>"; };
+		AACC7A131F57D3990008078A /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,16 +82,20 @@
 		AA2C70041F50DA6B00BFEABD /* Pushbase */ = {
 			isa = PBXGroup;
 			children = (
+				AACC7A111F57CCEC0008078A /* MenuController.swift */,
+				AACC7A0A1F57C52C0008078A /* SWRevealViewController */,
 				AACC7A051F53856E0008078A /* images */,
 				AACC79FC1F5382010008078A /* fonts */,
 				AA2C701D1F51EB9E00BFEABD /* Pushbase.xcdatamodeld */,
 				AA2C70051F50DA6B00BFEABD /* AppDelegate.swift */,
 				AA2C70071F50DA6B00BFEABD /* ViewController.swift */,
 				AA2C70171F50DE7700BFEABD /* Main.storyboard */,
+				AACC7A0F1F57CB3F0008078A /* NewsTableViewController.swift */,
 				AA2C70431F520A8F00BFEABD /* NewsFeedViewController.swift */,
 				AA2C700C1F50DA6B00BFEABD /* Assets.xcassets */,
 				AA2C700E1F50DA6B00BFEABD /* LaunchScreen.storyboard */,
 				AA2C70111F50DA6B00BFEABD /* Info.plist */,
+				AACC7A131F57D3990008078A /* NewsTableViewCell.swift */,
 			);
 			path = Pushbase;
 			sourceTree = "<group>";
@@ -108,9 +122,19 @@
 		AACC7A051F53856E0008078A /* images */ = {
 			isa = PBXGroup;
 			children = (
-				AACC7A061F53857E0008078A /* Quobi_Logo.png */,
+				AACC7A081F571A3A0008078A /* qobi_logo.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		AACC7A0A1F57C52C0008078A /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AACC7A0D1F57C56A0008078A /* SWRevealViewController.h */,
+				AACC7A0C1F57C56A0008078A /* SWRevealViewController.m */,
+				AACC7A0B1F57C5690008078A /* Pushbase-Bridging-Header.h */,
+			);
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +169,7 @@
 				TargetAttributes = {
 					AA2C70011F50DA6B00BFEABD = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -172,10 +197,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AACC7A021F5383DC0008078A /* GT-Walsheim-Bold.TTF in Resources */,
-				AACC7A071F53857E0008078A /* Quobi_Logo.png in Resources */,
 				AACC7A031F5383DC0008078A /* GT-Walsheim-Medium-Oblique.TTF in Resources */,
 				AACC7A041F5383DC0008078A /* GT-Walsheim-Medium.TTF in Resources */,
 				AA2C70191F50DF4F00BFEABD /* Main.storyboard in Resources */,
+				AACC7A091F571A3A0008078A /* qobi_logo.png in Resources */,
 				AACC79FE1F5382230008078A /* GT-Walsheim-Black.ttf in Resources */,
 				AA2C70101F50DA6B00BFEABD /* LaunchScreen.storyboard in Resources */,
 				AA2C700D1F50DA6B00BFEABD /* Assets.xcassets in Resources */,
@@ -190,7 +215,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA2C701F1F51EB9E00BFEABD /* Pushbase.xcdatamodeld in Sources */,
+				AACC7A121F57CCEC0008078A /* MenuController.swift in Sources */,
+				AACC7A141F57D3990008078A /* NewsTableViewCell.swift in Sources */,
 				AA2C70081F50DA6B00BFEABD /* ViewController.swift in Sources */,
+				AACC7A101F57CB3F0008078A /* NewsTableViewController.swift in Sources */,
+				AACC7A0E1F57C56A0008078A /* SWRevealViewController.m in Sources */,
 				AA2C70061F50DA6B00BFEABD /* AppDelegate.swift in Sources */,
 				AA2C70441F520A8F00BFEABD /* NewsFeedViewController.swift in Sources */,
 			);
@@ -329,11 +358,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2KKBAP635S;
 				INFOPLIST_FILE = Pushbase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pushbase.com.Pushbase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pushbase/SWRevealViewController/Pushbase-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -343,11 +375,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2KKBAP635S;
 				INFOPLIST_FILE = Pushbase/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pushbase.com.Pushbase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Pushbase/SWRevealViewController/Pushbase-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

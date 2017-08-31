@@ -54,8 +54,9 @@ class ViewController: UIViewController {
             if (txtUsername.text == res.value(forKey: "username") as! String? && txtPassword.text == res.value(forKey: "password") as! String?) {
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 
-                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "newsFeed") as! NewsFeedViewController
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "newsFeed") 
                 self.present(nextViewController, animated:true, completion:nil)
+                
             }
         } else {
             print("0 Results Returned... Potential Error.")
@@ -66,16 +67,39 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     txtUsername.attributedPlaceholder = NSAttributedString(string: "Username",
-                                                           attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+                                                           attributes: [NSAttributedStringKey.foregroundColor:
+                                                            UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)  ])
     txtPassword.attributedPlaceholder = NSAttributedString(string: "Password",
-                                                           attributes: [NSAttributedStringKey.foregroundColor: UIColor.white])
+                                                           attributes: [NSAttributedStringKey.foregroundColor:
+                                                            UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0)  ])
     
-        
+    txtUsername.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
+    txtPassword.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    /**
+     * Called when 'return' key pressed. return NO to ignore.
+     */
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    
+    /**
+     * Called when the user click on the view (outside the UITextField).
+     */
+    func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
     }
 
 
